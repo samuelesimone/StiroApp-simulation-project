@@ -1,0 +1,115 @@
+
+
+% !TeX spellcheck = en_US 
+\documentclass[12pt,english]{report}
+\usepackage{tesi}
+% CORSO DI LAUREA:
+\def\myCDL{Master in\\Computer Science}
+
+% TITOLO REPORT:
+\def\myTitle{Simulation \\
+\large{Final report on Agent-Based Simulation for StiroApp}}
+
+% AUTORE:
+\def\myName{Samuele Simone}
+\def\myMat{Matr. Nr. 11910A}
+
+\def\myRefereeA{Prof. Alberto Ceselli}
+
+% ANNO ACCADEMICO
+\def\myYY{2022-2023}
+
+% Il seguente comando introduce un elenco delle figure dopo l'indice (facoltativo)
+%\figurespagetrue
+
+% Il seguente comando introduce un elenco delle tabelle dopo l'indice (facoltativo)
+%\tablespagetrue
+
+
+% Package di formato
+\usepackage[a4paper]{geometry}		% Formato del foglio
+\usepackage[english]{babel}			% Supporto per l'italiano
+\usepackage[utf8]{inputenc}			% Supporto per UTF-8
+\usepackage[a-1b]{pdfx}			% File conforme allo standard PDF-A (obbligatorio per la consegna)
+
+% Package per la grafica
+\usepackage{graphicx}				% Funzioni avanzate per le immagini
+\usepackage{hologo}					% Bibtex logo with \hologo{BibTeX}
+%\usepackage{epsfig}				% Permette immagini in EPS
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+%Creating dark code theme for listings
+\definecolor{codegreen}{rgb}{0.58,0.88,0.58}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeorange}{rgb}{0.72,0.54,0.45}
+\definecolor{backcolour}{rgb}{0.10,0.13,0.14}
+\definecolor{myorange}{RGB}{245,156,74}
+\definecolor{keyw}{rgb}{0.60,0.85,0.98}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{keyw},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codeorange},
+    basicstyle=\ttfamily\footnotesize \color{white},
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Package tipografici
+\usepackage{amssymb,amsmath,amsthm} % Simboli matematici
+\usepackage{listings}				% Scrittura di codice
+
+% Package ipertesto
+\usepackage{url}					% Visualizza e rendere interattii gli URL
+\usepackage{hyperref}				% Rende interattivi i collegamenti interni
+\usepackage{notes2bib}
+
+\usepackage{multirow}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=myorange,
+    filecolor=magenta,  
+    }
+
+\begin{document}
+
+% Creazione automatica del frontespizio
+\frontespizio
+\beforepreface
+\afterpreface
+
+
+\input{../Chapters/Introduction}
+\input{../Chapters/Model}
+\input{../Chapters/Implementation}
+\input{../Chapters/KPI}
+\input{../Chapters/Experiments}
+\input{../Chapters/Conclusion}
+
+%
+%			BIBLIOGRAFIA
+%
+
+\bibliographystyle{unsrt}
+\bibliography{bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografia}
+
+
+\end{document}
+
+
+ 
