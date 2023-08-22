@@ -16,7 +16,12 @@
 \BOOKMARK [1][-]{section.2.3}{Rider\040agent}{chapter.2}% 16
 \BOOKMARK [1][-]{section.2.4}{Scheduler\040agent}{chapter.2}% 17
 \BOOKMARK [0][-]{chapter.3}{Implementation}{}% 18
-\BOOKMARK [0][-]{chapter.4}{KPI}{}% 19
-\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 20
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 21
-\BOOKMARK [0][-]{chapter*.2}{References}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Buyer\040agent\040implementation}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Scheduler\040agent\040implementation}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Rider\040agent\040implementation}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Worker\040agent\040implementation}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.5}{Main\040agent\040implementation}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{KPI}{}% 24
+\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 25
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 26
+\BOOKMARK [0][-]{chapter*.2}{References}{}% 27

@@ -17,7 +17,12 @@
 \contentsline {section}{\numberline {2.3}Rider agent}{9}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Scheduler agent}{9}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Implementation}{11}{chapter.3}%
-\contentsline {chapter}{\numberline {4}KPI}{12}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Experiments}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{14}{chapter.6}%
-\contentsline {chapter}{References}{15}{chapter*.2}%
+\contentsline {section}{\numberline {3.1}Buyer agent implementation}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Scheduler agent implementation}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Rider agent implementation}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Worker agent implementation}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Main agent implementation}{16}{section.3.5}%
+\contentsline {chapter}{\numberline {4}KPI}{18}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Experiments}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{20}{chapter.6}%
+\contentsline {chapter}{References}{21}{chapter*.2}%
