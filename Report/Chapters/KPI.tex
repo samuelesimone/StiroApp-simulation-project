@@ -5,7 +5,7 @@ In the top of the Figure \ref{figure:main} there are 3 different parameters:
 \item TransactionNumber
 \item Cost
 \end{itemize}
-These are my KPI. The goal of this simulation is to maximize the Revenue KPI and compare it with the Cost KPI that I want to minimize. Indeed all the startup/industries wants to increase their productivity and their earnings by comparing it to the cost of all the infrastructure. 
+These are my KPI. The goal of this simulation is to maximize the Revenue KPI and compare it with the Cost KPI that I want to minimize. Indeed all the startup/industries wants to increase their productivity and their earnings by comparing it to the cost of all the infrastructure. In this case the Costs are simplified and they are estimated with 64 euros/per day , so the cost of each rider.
 The Revenue is counted when a valid transaction occurs. To be valid the flow Buyer $\rightarrow$ Worker and Worker $\rightarrow$ Buyer must be completed. Revenue and TransactionNumber are updated in the \textbf{ReadyForDelivery state} with the following code: 
 \begin{lstlisting}[language=Java]
 main.TransactionNumber++;
