@@ -1,2 +1,21 @@
 \chapter{Model}
-ci
+In order to simulate the traffic over the app and to estimate revenues, costs and other KPI that are described in the Chapter \ref{ch:KPI}, I used the agent-based modeling.
+As well described from the Columbia University website \cite{columbia}, Agent-based models are computer simulations used to study the interactions between people, things, places, and time. They are stochastic models built from the bottom up meaning individual agents (often people in epidemiology) are assigned certain attributes.The agents are programmed to behave and interact with other agents and the environment in certain ways. \par
+The agents that are involved in the model are:
+\begin{itemize}
+\item \textbf{Worker\_iron}: Represents the worker within the application
+\item \textbf{Buyer}: Represents the buyer, i.e., the one who creates the posts with their clothing
+\item \textbf{Rider}: He is in charge of picking up the goods and delivering them to the respective worker/buyer.
+\item \textbf{Scheduler}: He/she is in charge of handling incoming posts and directing them
+\end{itemize}
+We will see during this Chapter how I modeled these agents for StiroApp.
+\section{Worker\_iron agent}
+Below I will go on to describe the logic of the Worker\_iron agent. The technical details will be discussed in Chapter \ref{ch:implementation}.
+Basically the worker as soon as it is generated waits for some order to be assigned to it, in a \textbf{Waiting state}. 
+Through a branch the worker by condition wonders whether it has received the order or not. In the first case then he can start working by entering the \textbf{Working state} and after a Uniform Discrete random variable $\mathcal{U}(a,b)$ where $a = 2, b = 60$ minutes, he enter in a \textbf{ReadyForDelivery state} Then, with a 10 minutes Timeout transition enter in a branch and through a Bernoulli random variable $\mathcal{B}(p)$ where $p = 0.7$ he decides whether to finish his task or re-enter the \textbf{Waiting state}.In the second case, on the other hand, he enters the \textbf{Thinking state} and then after a small timeout point to the same transition branch where there is the Bernoulli random variable.
+\section{Buyer agent}
+The Buyer as soon as it is generated is in a \textbf{Waiting state}. In fact here, through a transition to the branch you want to check if that specific agent is new or already created and therefore is waiting for his order. If he is new then he can create a post with his clothing by entering the \textbf{CreatePost state}. After that through a Timeout of 10 min he enters the \textbf{Waiting state} and also through a Bernoulli random variable $\mathcal{B}(p)$ where $p = 0.7$ he decides whether to finish his task or re-enter the \textbf{Waiting state}. If,instead, he has already a pending order and it's notified as delivered he can again through the same branch if finish or re-enter.
+\section{Rider agent}
+The rider plays a key role within my simulation. In fact it involves a slightly more complex logic in that its task depends on the type of order received. Initially it is in a \textbf{Waiting state}. As soon as it receives an order it goes into the \textbf{AssignedOrder state}. Then it has to figure out through the properties of the received order whether it is a pickup or a delivery. In fact the rider first has to go to the buyer and receive the clothes for which it wants to perform a service and from there, the rider has to deliver it at the chosen worker. Once this is done through a Bernoulli random variable $\mathcal{B}(p)$ where $p = 0.7$ decides whether to continue working enter the Waiting state again or stop working. If it continues working it may happen to receive the delivery order and then go to a worker who is in the ReadyForDelivery state, pick up the clothes, and return them to the buyer who owns those clothes.
+\section{Scheduler agent}
+This agent, on the other hand, acts as a conduit between agents by handling the exchange of messages (specifically, we will see that we will be dealing with the dispatch of an object of type Post). It presents two states, a \textbf{Wait state} and a \textbf{Dispatch state}. It simply presents two transitions and allow you to manage the event queue and based on the type of post received sort the dispatches to the correct recipient.
