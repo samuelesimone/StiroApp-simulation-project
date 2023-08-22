@@ -1,2 +1,14 @@
 \chapter{KPI}\label{ch:KPI}
-ci
+In the top of the Figure \ref{figure:main} there are 3 different parameters:
+\begin{itemize}
+\item Revenue
+\item TransactionNumber
+\item Cost
+\end{itemize}
+These are my KPI. The goal of this simulation is to maximize the Revenue KPI and compare it with the Cost KPI that I want to minimize. Indeed all the startup/industries wants to increase their productivity and their earnings by comparing it to the cost of all the infrastructure. 
+The Revenue is counted when a valid transaction occurs. To be valid the flow Buyer $\rightarrow$ Worker and Worker $\rightarrow$ Buyer must be completed. Revenue and TransactionNumber are updated in the \textbf{ReadyForDelivery state} with the following code: 
+\begin{lstlisting}[language=Java]
+main.TransactionNumber++;
+main.Revenue += postArrived.postPrice * main.perc_revenue + main.fixed_cost;
+\end{lstlisting}
+So,as described in the subsection \ref{subsection:businessModel}, I will use two parameters like perc\_revenue and  fixed\_cost in order to increase the earnings. So by playing with the sliders we obtain several different scenarios that are fully shown in the Chapter \ref{ch:experiments}.
