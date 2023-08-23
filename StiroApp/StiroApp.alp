@@ -1950,7 +1950,7 @@ shapeBody.setFillColor(plum);]]></EntryAction>
 						<Point><X>0</X><Y>30</Y></Point>
 					</Points>
 					<Properties Target="1691681521079">
-						<Action><![CDATA[main.Cost += 64.00;]]></Action>
+						<Action><![CDATA[main.Cost += 32.00;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
